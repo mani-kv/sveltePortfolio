@@ -1,4 +1,4 @@
-This portfolio uses starter template using Svelte-kit with Tailwind CSS JIT, Markdown and SEO support 
+This portfolio uses starter template using Svelte-kit with Tailwind CSS JIT, Markdown and SEO support.
 
 ## Developing
 

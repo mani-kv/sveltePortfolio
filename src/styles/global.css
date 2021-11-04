@@ -870,16 +870,10 @@ video {
 .mdtext > :last-child {
 	margin-bottom: 0;
 }
-.mdtext-blue a {
-	color: #2563eb;
-}
-.mdtext-blue a code {
-	color: #2563eb;
-}
 .p-20 {
 	padding: 5rem;
 }
-.text-gray-800 {
+.text-red-800 {
 	--tw-text-opacity: 1;
-	color: rgba(31, 41, 55, var(--tw-text-opacity));
+	color: rgba(153, 27, 27, var(--tw-text-opacity));
 }
