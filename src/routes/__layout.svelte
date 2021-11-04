@@ -28,7 +28,6 @@
     });
 
 </script>
-  <!-- Try some classes here -->
 
 
 <svelte:component this={Nav} />

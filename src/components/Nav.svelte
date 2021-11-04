@@ -23,24 +23,3 @@
 
    
 </div>
-
-
-<!-- 
-
-
-
-{#if window.location.pathname === '/'}
-
-<a href="/" id='work' class="m-3 hover:text-blue-600 hover:cursor-pointer active:text-blue-600 text-blue-600" >Work</a>
-<a href="/about" class="m-3 hover:text-blue-600 hover:cursor-pointer active:text-blue-600" >About</a>
-
-{:else if  window.location.pathname === '/about'}
-
-<a href="/" id='work' class="m-3 hover:text-blue-600 hover:cursor-pointer active:text-blue-600 " >Work</a>
-
-<a href="/about" class="m-3 hover:text-blue-600 hover:cursor-pointer active:text-blue-600 text-blue-600" >About</a>
-
-
-
-{/if}
- -->
