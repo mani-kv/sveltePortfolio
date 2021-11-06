@@ -5,14 +5,14 @@
     let Nav
 
     onMount(async () => {
-        const module = await import('../components/Nav.svelte');
+        const module = await import('../lib/Nav.svelte');
         Nav = module.default;
 
        
     });
 
     afterUpdate(() => {
-		// ...the DOM is now painted
+		// ...the DOM is now painted, add the active class to nav elements
 
       if(document.querySelector("a#work")) {
         if(window.location.pathname === '/') {
@@ -24,14 +24,19 @@
           document.querySelector("a#work").classList.remove('text-blue-600')
 
         }
+       
       } 
+
+
     });
 
 </script>
 
 
-<svelte:component this={Nav} />
-<div class="mdtext text-red-800 p-20">
-  
-  <slot />
+<div class=" ">
+  <svelte:component this={Nav} class=""/>
+  <div class="flex text-gray-800 p-20 ">
+
+    <slot />
+  </div>
 </div>

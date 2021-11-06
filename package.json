@@ -25,6 +25,8 @@
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.42.6",
     "svelte-preprocess-markdown": "^2.7.3",
+    "svelte-scrollto": "^0.2.0",
+    "svelte-toc": "^0.1.9",
     "tailwindcss": "^2.2.15"
   },
   "type": "module",

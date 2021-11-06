@@ -1,9 +1,9 @@
 
 <div class="w-auto h-20 bg-white shadow sticky top-0 flex items-center justify-between">
 
-    <div class="px-10 font-sans text-2xl tracking-wider font-semibold" id="logo">
+    <a class="px-10 font-sans text-2xl tracking-wider font-semibold" id="logo" href="/">
         Mani<span class=" text-blue-600">.</span>
-    </div>
+    </a>
 
 
 
@@ -15,7 +15,7 @@
             
             
       
-        <button class="uppercase text-sm tracking-wider font-semibold px-3 py-2 m-3 bg-blue-600 text-white rounded-md hover:bg-blue-500">Resume</button>
+        <a href="/Resume.pdf" target="_blank" id="resume-btn" class="uppercase text-sm tracking-wider font-semibold px-3 py-2 m-3 bg-blue-600 text-white rounded-md hover:bg-blue-500">Resume</a>
 
         
     </nav>

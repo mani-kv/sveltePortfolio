@@ -1,5 +1,20 @@
 <script>
       import SvelteSeo from "svelte-seo";
+      import Card from '$lib/card.svelte'
+// import About from "./about.svelte";
+
+      let Projects = [{
+          
+            Path:'/projects/project1',
+            Description: 'This is a description of Project 1',
+            Title: 'Project 1'
+          },
+          {
+            Path:'/projects/project2',
+            Description: 'This is a description of Project 2',
+            Title: 'Project 2'
+
+        }]
       
 </script>
 
@@ -8,16 +23,18 @@
   description="A short description goes here."
   keywords="key1, key2, key3"
 />
-<!-- 
-<h1>
-  Home page
-</h1>
-<p>Visit https://kit.svelte.dev to read the documentation</p>
- --> 
 
 
 <div class="">
   <span class="">
     adas das das da dasd 
   </span>
+  
+  {#each Projects as project}
+  
+   
+     <Card {...project} />
+     
+  {/each}
 </div>
+
