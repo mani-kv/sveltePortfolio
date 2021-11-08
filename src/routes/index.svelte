@@ -26,9 +26,6 @@
 
 
 <div class="">
-  <span class="">
-    adas das das da dasd 
-  </span>
   
   {#each Projects as project}
   

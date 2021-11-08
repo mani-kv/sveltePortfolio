@@ -15,7 +15,7 @@
 		// ...the DOM is now painted, add the active class to nav elements
 
       if(document.querySelector("a#work")) {
-        if(window.location.pathname === '/') {
+        if(window.location.pathname === '/' || window.location.pathname.substring('/projects/')) {
           document.querySelector("a#about").classList.remove('text-blue-600')
           document.querySelector("a#work").classList.add('text-blue-600')
         }

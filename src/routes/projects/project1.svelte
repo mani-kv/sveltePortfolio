@@ -2,6 +2,7 @@
 import SvelteSeo from "svelte-seo";
 import Sidebar from '$lib/Sidebar.svelte'
 import {afterUpdate} from 'svelte'
+import Breadcrumb from '$lib/Breadcrumb.svelte'
 
 // let toc = runToc()
 let Toc
@@ -29,7 +30,9 @@ afterUpdate(() => {
 <Sidebar Toc={Toc}/>
 <div class="flex flex-col">
 
-    <h1 id="Topic1">H1: The top level header </h1>
+    <Breadcrumb Page="Project 1"/>
+
+    <h1 id="Topic1" class=" text-4xl mb-12">H1: The top level header </h1>
     <p>The H1 font specification is less relevant because in postings and pages the headers will start with H2. Interestingly, the title of the page (i.e. &#8220;Example header text&#8221; in the case of this page) is not styled with an H1.</p>
     <h2>H2: The second level header</h2>
     <p>It turns out that we have some second level headers (for example, on the academic, research, careers, or community profile pages) that are fairly long. While uppercase looks OK for single word titles, it looks less good when the header consists of 7-10 words and spans multiple lines.  To me, the latter case looks like we are SCREAMING AT THE READER TO PAY ATTENTION TO OUR SECTION TITLE.</p>
