@@ -1,5 +1,6 @@
 <script>
     import Chip from '$lib/Chip.svelte'
+    import {fly, fade} from 'svelte/transition'
     export let Path
     export let Description
     export let Title
@@ -15,7 +16,7 @@
 </script>
 
 
-<div class="flex flex-row mb-12">
+<div class="flex flex-row mb-12" in:fly="{{ y: 20, duration: 150 }}" out:fade="{{duration: 150}}">
     <div id='img' class="p-1 shadow border rounded cursor-pointer mr-6" on:click={() => navigate()}>
         <img src={Img.source} alt={Img.alt} width="600px" height="100%">
     </div>
