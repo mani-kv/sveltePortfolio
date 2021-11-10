@@ -35,7 +35,7 @@
 
 <div class=" ">
   <svelte:component this={Nav} class=""/>
-  <div class="flex text-gray-800 p-20 ">
+  <div class="flex text-gray-800 py-20 px-40">
 
     <slot />
   </div>

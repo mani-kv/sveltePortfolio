@@ -2,9 +2,5 @@
     // your script goes here
 </script>
 
+<slot />
 
-<div class="flex flex-row">
-    
-
-    <slot />
-</div>

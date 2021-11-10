@@ -1,17 +1,41 @@
 <script>
+    import Chip from '$lib/Chip.svelte'
     export let Path
     export let Description
     export let Title
+    export let Keywords = []
+    export let Img = {
+        source:'',
+        alt:''
+    }
 
     function navigate() {
         window.location = Path
     }
 </script>
-<div class="flex flex-col bg-blue-800 p-20 w-auto rounded-md hover:bg-blue-600 hover:shadow-md text-white my-5 cursor-pointer" on:click={() => navigate()}>
-    <div id="header" class="text-4xl font-bold mb-12 text-white">
-        <h1 class="">{Title}</h1>
+
+
+<div class="flex flex-row mb-12">
+    <div id='img' class="p-1 shadow border rounded cursor-pointer mr-6" on:click={() => navigate()}>
+        <img src={Img.source} alt={Img.alt} width="600px" height="100%">
     </div>
-    <div id="body" class="">
-    <p class="">{Description}</p>
+    <div id='details' class="flex flex-col p-6 w-auto justify-between">
+        <div id="overview" class="flex flex-col ">
+            <span class="text-3xl font-bold mb-4 text-gray-800">{Title}</span>
+            <div id="chips" class="mb-4 flex flex-row">
+
+
+                {#each Keywords as Keys}
+                     <Chip ChipName = {Keys} />
+                {/each}
+               
+            </div>
+            <span class="text-md font-normal text-gray-700">{Description}</span>
+           
+            
+            
+        </div>
+        <button class="px-3 py-2 border inline-flex w-max bg-white text-gray-800 shadow-sm hover:shadow-md  hover:text-blue-600 transform transition-all font-semibold text-sm rounded" on:click={() => navigate()}>Read More</button>
+
     </div>
 </div>

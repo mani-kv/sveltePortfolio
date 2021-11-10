@@ -51,7 +51,7 @@
     <div id='sidebar' class="mr-20 w-32 mt-20 flex flex-col sticky top-60" >
        
         {#each Toc as node}
-        <a href='#{node.id}' on:click={() => animateScroll.scrollTo({element: `#${node.id}`, duration: 300, offset: -160})} class="links mb-4 text-gray-800 font-semibold text-base cursor-pointer" >{node.id}</a>
+        <a href='#{node.id}' on:click={() => animateScroll.scrollTo({element: `#${node.id}`, duration: 300, offset: -160})} class="links mb-4 text-gray-800 font-semibold text-base cursor-pointer hover:text-blue-500" >{node.id}</a>
         {/each}
 
         
