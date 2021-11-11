@@ -22,9 +22,9 @@ export function init(settings = default_settings) {
 		amp: false,
 		dev: false,
 		entry: {
-			file: assets + "/_app/start-c8792f5e.js",
+			file: assets + "/_app/start-8125b900.js",
 			css: [assets + "/_app/assets/start-d5b4de3e.css"],
-			js: [assets + "/_app/start-c8792f5e.js",assets + "/_app/chunks/vendor-e63b01f8.js"]
+			js: [assets + "/_app/start-8125b900.js",assets + "/_app/chunks/vendor-d80244fc.js",assets + "/_app/chunks/preload-helper-ec9aa979.js"]
 		},
 		fetched: undefined,
 		floc: false,
@@ -70,16 +70,30 @@ const d = s => s
 const empty = () => ({});
 
 const manifest = {
-	assets: [{"file":"favicon.png","size":1571,"type":"image/png"}],
+	assets: [{"file":"Resume.pdf","size":38427,"type":"application/pdf"},{"file":"favicon.png","size":1571,"type":"image/png"},{"file":"lottie-404-page.json","size":72736,"type":"application/json"}],
 	layout: "src/routes/__layout.svelte",
-	error: ".svelte-kit/build/components/error.svelte",
+	error: "src/routes/__error.svelte",
 	routes: [
 		{
 						type: 'page',
 						pattern: /^\/$/,
 						params: empty,
 						a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
-						b: [".svelte-kit/build/components/error.svelte"]
+						b: ["src/routes/__error.svelte"]
+					},
+		{
+						type: 'page',
+						pattern: /^\/projects\/project1\/?$/,
+						params: empty,
+						a: ["src/routes/__layout.svelte", "src/routes/projects/__layout.svelte", "src/routes/projects/project1.svelte"],
+						b: ["src/routes/__error.svelte"]
+					},
+		{
+						type: 'page',
+						pattern: /^\/about\/?$/,
+						params: empty,
+						a: ["src/routes/__layout.svelte", "src/routes/about.svelte"],
+						b: ["src/routes/__error.svelte"]
 					}
 	]
 };
@@ -94,10 +108,10 @@ const get_hooks = hooks => ({
 });
 
 const module_lookup = {
-	"src/routes/__layout.svelte": () => import("../../src/routes/__layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components/error.svelte"),"src/routes/index.svelte": () => import("../../src/routes/index.svelte")
+	"src/routes/__layout.svelte": () => import("../../src/routes/__layout.svelte"),"src/routes/__error.svelte": () => import("../../src/routes/__error.svelte"),"src/routes/index.svelte": () => import("../../src/routes/index.svelte"),"src/routes/projects/__layout.svelte": () => import("../../src/routes/projects/__layout.svelte"),"src/routes/projects/project1.svelte": () => import("../../src/routes/projects/project1.svelte"),"src/routes/about.svelte": () => import("../../src/routes/about.svelte")
 };
 
-const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"pages/__layout.svelte-b7890836.js","css":["assets/pages/__layout.svelte-659f0b8b.css"],"js":["pages/__layout.svelte-b7890836.js","chunks/vendor-e63b01f8.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"error.svelte-b76d7541.js","css":[],"js":["error.svelte-b76d7541.js","chunks/vendor-e63b01f8.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-679420db.js","css":[],"js":["pages/index.svelte-679420db.js","chunks/vendor-e63b01f8.js"],"styles":[]}};
+const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"pages/__layout.svelte-d251b894.js","css":["assets/pages/__layout.svelte-c8db8dd2.css"],"js":["pages/__layout.svelte-d251b894.js","chunks/preload-helper-ec9aa979.js","chunks/vendor-d80244fc.js"],"styles":[]},"src/routes/__error.svelte":{"entry":"pages/__error.svelte-2f6d94e1.js","css":[],"js":["pages/__error.svelte-2f6d94e1.js","chunks/vendor-d80244fc.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-02cea124.js","css":[],"js":["pages/index.svelte-02cea124.js","chunks/vendor-d80244fc.js"],"styles":[]},"src/routes/projects/__layout.svelte":{"entry":"pages/projects/__layout.svelte-0dda6a3d.js","css":[],"js":["pages/projects/__layout.svelte-0dda6a3d.js","chunks/vendor-d80244fc.js"],"styles":[]},"src/routes/projects/project1.svelte":{"entry":"pages/projects/project1.svelte-b9fd1f42.js","css":[],"js":["pages/projects/project1.svelte-b9fd1f42.js","chunks/vendor-d80244fc.js"],"styles":[]},"src/routes/about.svelte":{"entry":"pages/about.svelte-94a2ea11.js","css":[],"js":["pages/about.svelte-94a2ea11.js","chunks/vendor-d80244fc.js"],"styles":[]}};
 
 async function load_component(file) {
 	const { entry, css, js, styles } = metadata_lookup[file];

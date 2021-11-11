@@ -780,13 +780,13 @@ video {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 }
-.text-4xl {
-	font-size: 2.25rem;
-	line-height: 2.5rem;
-}
 .text-xl {
 	font-size: 1.25rem;
 	line-height: 1.75rem;
+}
+.text-4xl {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 }
 .font-semibold {
 	font-weight: 600;
@@ -802,9 +802,6 @@ video {
 }
 .uppercase {
 	text-transform: uppercase;
-}
-.italic {
-	font-style: italic;
 }
 .tracking-widest {
 	letter-spacing: 0.1em;

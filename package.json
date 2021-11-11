@@ -4,11 +4,12 @@
   "scripts": {
     "dev:only": "svelte-kit dev",
     "build:only": "svelte-kit build",
+    "build:encrypt": "npx staticrypt .svelte-kit/output/client/_app/pages/projects/project1.svelte-b9fd1f42.js P@SSW0RD -o .svelte-kit/output/client/_app/pages/projects/project1.svelte-b9fd1f42.js",
     "preview": "svelte-kit preview",
     "tailwind:watch": "TAILWIND_MODE=watch NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/global.css -w",
     "tailwind:build": "TAILWIND_MODE=build NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/global.css",
     "dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
-    "build": "npm run tailwind:build && npm run build:only",
+    "build": "npm run tailwind:build && npm run build:only && npm run build:encrypt",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
@@ -31,7 +32,9 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.55",
     "@tailwindcss/typography": "^0.4.1",
+    "staticrypt": "^1.3.2",
     "svelte-seo": "^1.3.1"
   }
 }

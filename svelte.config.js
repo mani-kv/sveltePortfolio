@@ -2,6 +2,7 @@
 
 import {markdown} from 'svelte-preprocess-markdown'
 import adapter from '@sveltejs/adapter-netlify';
+// import node from '@sveltejs/adapter-node';
 
 
 const config = {
@@ -10,6 +11,7 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		adapter: adapter()
+		// adapter: node()
 	},
 	preprocess: markdown()
 };

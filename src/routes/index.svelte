@@ -59,7 +59,7 @@
       let finalProjectList = Projects
 
       function applyFilter (event) {
-        console.log(event.detail.filter)
+        // console.log(event.detail.filter)
         let selected = event.detail.filter
 
         if (selected === 'All') {
@@ -69,7 +69,7 @@
           finalProjectList = FilteredProjects(selected)
         }
         
-        console.log(finalProjectList)
+        // console.log(finalProjectList)
         return finalProjectList
         
       } 
