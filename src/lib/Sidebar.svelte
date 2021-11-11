@@ -30,7 +30,7 @@
                         // console.log(link)
                         link.classList.remove('text-blue-600')
                     }})
-                    linkNode[i].classList.add('text-blue-600') 
+                    if(linkNode[i]) linkNode[i].classList.add('text-blue-600') 
                     // linkNode[i].classList.add('font-semibold') 
                     }
 
